@@ -17,3 +17,5 @@ public class HowLarge {
         System.out.println(listOfStrings.size());
     }
 }
+
+// why is it scanner is highlighted but others arent??

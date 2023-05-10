@@ -31,3 +31,16 @@ public class SumOfList {
     }
 }
 
+// intelli j suggests for (int num : as opposed to the other method
+// line 27 is the same as
+//    for (int i = 0; i < listOfNumbers.size(); i++) {
+//    totalSum += listOfNumbers.get(i);
+//}
+
+
+// or
+
+
+//    for (int i = 0; i < listOfNumbers.size(); i++) {
+//    totalSum = totalSum + listOfNumbers.get(i).intValue();
+//    }
