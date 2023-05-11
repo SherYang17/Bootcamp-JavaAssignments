@@ -104,7 +104,6 @@ public class Main {
     }
 
     public static void week() {
-
         Scanner scanner = new Scanner(System.in);
         boolean continueWeek = true;
 
@@ -117,7 +116,7 @@ public class Main {
             }
             int number = Integer.parseInt(input); //convert string to int
 
-        switch(number) {
+            switch(number) {
             case 1: System.out.println("Bare minimum Mondays are a thing now");
                 break;
             case 2: System.out.println("Tuesdays are just okay");
@@ -135,9 +134,21 @@ public class Main {
             default: System.out.println("Bruh, I said to enter a number from 1 thru 7");
 
              }
-        }
+        }//while loop ends here
     }
 
 }
 
 
+// Reference switch from w3
+// https://www.w3schools.com/java/java_switch.asp
+//      switch (day) {
+//        case 6:
+//        System.out.println("Today is Saturday");
+//        break;
+//        case 7:
+//        System.out.println("Today is Sunday");
+//        break;
+//        default:
+//        System.out.println("Looking forward to the Weekend");
+//        }
