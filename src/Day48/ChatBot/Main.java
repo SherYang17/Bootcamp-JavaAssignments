@@ -123,7 +123,7 @@ public class Main {
                 break;
             case 3: System.out.println("Taco Wednesdays");
                 break;
-            case 4: System.out.println("Sunday Mayday");
+            case 4: System.out.println("Thursdays are okay. It's 1 day closer to friday, thats all that matters!");
                 break;
             case 5: System.out.println("FRIDAY LETS Go0oo0o0o0o0o0o0o0o0o0o0o0o0o0oo0o00oo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 break;
