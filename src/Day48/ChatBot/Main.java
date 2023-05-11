@@ -108,7 +108,7 @@ public class Main {
         boolean continueWeek = true;
 
         while (continueWeek) {
-            System.out.println("Enter a number 1 through 7 to know more about what I enjoy during the week (or type 'no' to end this.):");
+            System.out.println("Enter a number 1 through 7 to know more about what I enjoy during the week (or type 'no' to end this):");
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("no")) {
                 continueWeek = false;
