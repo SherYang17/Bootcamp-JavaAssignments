@@ -8,6 +8,7 @@ public class Main {
         ageGuesser();
         counting();
         testingYou();
+        week();
         System.out.println("Thank you for talking to me. Have a great day!");
     }
 
@@ -26,12 +27,12 @@ public class Main {
 
     public static void ageGuesser() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("I'm known to be pretty good at guessing peoples age.");
+        System.out.println("I'm known to be pretty good at guessing peoples age. Let me ask you some questions to guess your age.");
         System.out.println("Have you ever been accused of being a witch or practicing witchcraft? Yes or No?");
         String answer1 = scanner.nextLine().toLowerCase();;
 
         if (answer1.equalsIgnoreCase("yes")) {
-            System.out.println("Aha! You're funny! Theres no way you were born before the 1800s");
+            System.out.println("Haha! You're funny! Theres no way you were born before the 1800s");
         } else {
             System.out.println("Did you ever try to learn the choreography from a Britney Spears music video?");
             String answer2 = scanner.nextLine().toLowerCase();
@@ -57,7 +58,7 @@ public class Main {
             }
         }
 
-        System.out.println("So like, asking for a friend... what year you were born?");
+        System.out.println("So like, asking for a friend... what year were you born?");
         int year = Integer.valueOf(scanner.nextLine());
 
         int currentYear = 2023;
@@ -99,8 +100,43 @@ public class Main {
                 testAnswer = scanner.nextLine();
             }
         }
+
     }
 
+    public static void week() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean continueWeek = true;
+
+        while (continueWeek) {
+            System.out.println("Enter a number 1 through 7 to know more about what I enjoy during the week (or type 'no' to end this.):");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("no")) {
+                continueWeek = false;
+                break;
+            }
+            int number = Integer.parseInt(input); //convert string to int
+
+        switch(number) {
+            case 1: System.out.println("Bare minimum Mondays are a thing now");
+                break;
+            case 2: System.out.println("Tuesdays are just okay");
+                break;
+            case 3: System.out.println("Taco Wednesdays");
+                break;
+            case 4: System.out.println("Sunday Mayday");
+                break;
+            case 5: System.out.println("FRIDAY LETS Go0oo0o0o0o0o0o0o0o0o0o0o0o0o0oo0o00oo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                break;
+            case 6: System.out.println("Saturday is a resting day");
+                break;
+            case 7: System.out.println("Sunday ... is another resting day lol");
+                break;
+            default: System.out.println("Bruh, I said to enter a number from 1 thru 7");
+
+             }
+        }
+    }
 
 }
 
