@@ -54,12 +54,9 @@ public class BankAccountMain {
             BankAccount selectedAccount = accounts.get(accountChoice - 1);
             mainMenu(selectedAccount, accounts);
         } else {
-            System.out.println("Sorry, invalid choice, exiting the menu...Please try again.");
+            System.out.println("Please come again and have a great day!");
         }
 
-        if (accountChoice == -1) {
-            System.out.println("HAVEA  NICE DAY");
-        }
 
     }
 
