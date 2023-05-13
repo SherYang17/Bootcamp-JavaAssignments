@@ -1,4 +1,4 @@
-package Day50.BankAccount.ObjectsInLists;
+package Day50.ObjectsInLists;
 
 public class Book {
     private String title;

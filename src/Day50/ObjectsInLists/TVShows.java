@@ -1,4 +1,4 @@
-package Day50.BankAccount.ObjectsInLists;
+package Day50.ObjectsInLists;
 
 public class TVShows {
     private String showName;

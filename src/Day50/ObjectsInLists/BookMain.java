@@ -1,4 +1,4 @@
-package Day50.BankAccount.ObjectsInLists;
+package Day50.ObjectsInLists;
 import java.util.Scanner;
 import java.util.ArrayList;
 public class BookMain {

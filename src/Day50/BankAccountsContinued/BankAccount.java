@@ -1,4 +1,4 @@
-package Day50.BankAccount.BankAccountsContinued;
+package Day50.BankAccountsContinued;
 import java.util.Scanner;
 public class BankAccount {
     private double accountBalance;

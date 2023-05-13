@@ -1,4 +1,4 @@
-package Day50.BankAccount.OverloadingPractice;
+package Day50.OverloadingPractice;
 
 import java.util.ArrayList;
 import java.util.Scanner;

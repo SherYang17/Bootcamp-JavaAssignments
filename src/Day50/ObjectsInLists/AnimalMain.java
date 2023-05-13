@@ -1,4 +1,4 @@
-package Day50.BankAccount.ObjectsInLists;
+package Day50.ObjectsInLists;
 import java.util.ArrayList;
 import java.util.Scanner;
 

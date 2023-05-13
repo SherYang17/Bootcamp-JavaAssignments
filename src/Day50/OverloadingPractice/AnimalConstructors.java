@@ -1,4 +1,4 @@
-package Day50.BankAccount.OverloadingPractice;
+package Day50.OverloadingPractice;
 
 public class AnimalConstructors {
     public static void main(String[] args) {
