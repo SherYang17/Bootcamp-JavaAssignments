@@ -1,4 +1,4 @@
-package Day50.BankAccount.BankAccountsPart2BankMenuBankTransfer;
+package Day50.BankAccount.BankAccountsContinued;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class BankAccountMain {
