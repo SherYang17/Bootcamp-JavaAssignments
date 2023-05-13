@@ -17,48 +17,45 @@ public class BankAccountMain {
 //        accounts.add(bankAccount3);
 
 
-        System.out.println("Hellow World! Welcome to the Bank of Sher!");
+        System.out.println("Hello World! Welcome to the Bank of Sher!");
         System.out.println("Are you an existing customer? (-1 to exit)");
         System.out.println("1. Yes");
         System.out.println("2. No");
         int accountChoice = scanner.nextInt();
-        scanner.nextLine(); // Include this or else the two sout below will display and break the code https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo
-
-
-
 
         if (accountChoice == 1) {
-
             System.out.println("Select an account:");
             for (int i = 0; i < accounts.size(); i++) {
                 System.out.println((i + 1) + ". " + accounts.get(i).getAccountName());
             }
-            scanner.nextLine();
-        }
+            int selectedAccountChoice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline character
 
-
-        if (accountChoice == 2) {
+            if (selectedAccountChoice >= 1 && selectedAccountChoice <= accounts.size()) {
+                BankAccount selectedAccount = accounts.get(selectedAccountChoice - 1);
+                mainMenu(selectedAccount, accounts);
+            } else {
+                System.out.println("Invalid account choice. Please try again.");
+            }
+        } else if (accountChoice == 2) {
             // Create a new account
-//            Scanner scanner = new Scanner(System.in);
+            scanner.nextLine();
             System.out.println("Welcome to Bank of Sher! Enter your name.");
             String accountHolder = scanner.nextLine();
             System.out.println("What is the beginning balance for the account?");
             double initialBalance = scanner.nextDouble();
+            scanner.nextLine(); // Consume newline character
 
             BankAccount newAccount = new BankAccount(initialBalance, accountHolder, accounts.size() + 1);
             accounts.add(newAccount);
 
             System.out.println("Your new account has been created successfully.");
             mainMenu(newAccount, accounts);
-        } else if (accountChoice >= 1 && accountChoice <= accounts.size()) {
-            BankAccount selectedAccount = accounts.get(accountChoice - 1);
-            mainMenu(selectedAccount, accounts);
         } else {
             System.out.println("Please come again and have a great day!");
         }
-
-
     }
+
 
 
 
