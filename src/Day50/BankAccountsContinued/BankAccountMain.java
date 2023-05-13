@@ -29,7 +29,7 @@ public class BankAccountMain {
                 System.out.println((i + 1) + ". " + accounts.get(i).getAccountName());
             }
             int selectedAccountChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+            scanner.nextLine(); // https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo
 
             if (selectedAccountChoice >= 1 && selectedAccountChoice <= accounts.size()) {
                 BankAccount selectedAccount = accounts.get(selectedAccountChoice - 1);
@@ -44,7 +44,7 @@ public class BankAccountMain {
             String accountHolder = scanner.nextLine();
             System.out.println("What is the beginning balance for the account?");
             double initialBalance = scanner.nextDouble();
-            scanner.nextLine(); // Consume newline character
+            scanner.nextLine(); // https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo
 
             BankAccount newAccount = new BankAccount(initialBalance, accountHolder, accounts.size() + 1);
             accounts.add(newAccount);
@@ -55,8 +55,6 @@ public class BankAccountMain {
             System.out.println("Please come again and have a great day!");
         }
     }
-
-
 
 
 
@@ -125,8 +123,6 @@ public class BankAccountMain {
             }
         }
     }
-
-
 
 
 
