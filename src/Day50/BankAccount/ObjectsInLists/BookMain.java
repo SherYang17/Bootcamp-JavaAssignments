@@ -5,9 +5,10 @@ public class BookMain {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         ArrayList<Book> ourBooks = new ArrayList<>();
-        ourBooks.add(new Book("The Great Gatsby", 180, 1925));
-        ourBooks.add(new Book("Moby Dick", 720, 1851));
-        ourBooks.add(new Book("War and Peace", 1225, 1869));
+        ourBooks.add(new Book("To Kill A Monckingbird", 281, 1960));
+        ourBooks.add(new Book("A Brief History Of Time", 256, 1988));
+        ourBooks.add(new Book("Beautiful Code", 593, 2007));
+        ourBooks.add(new Book("The Name of the Wind", 662, 2007));
 
         while (true) {
             System.out.println("Enter a book:");
