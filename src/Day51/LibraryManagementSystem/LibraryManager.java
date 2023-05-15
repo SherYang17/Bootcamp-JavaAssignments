@@ -4,7 +4,13 @@ import java.util.List;
 
 
 public class LibraryManager<T extends LibraryItem> implements LibraryOperations<T> {
-    private List<T> items = new ArrayList<>();
+    private List<T> items;
+
+    public LibraryManager() {
+        items = new ArrayList<>();
+    }
+
+
 
 
     @Override

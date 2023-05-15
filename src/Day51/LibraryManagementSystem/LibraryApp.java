@@ -5,6 +5,7 @@ public class LibraryApp {
     public static void main(String[] args) {
         LibraryManager<LibraryItem> ourLibraryApp = new LibraryManager<>();
 
+
         Book book1 = new Book("The Invisible Board Members: SET's Ghostly Investors", 2023, "Invisible Yang", "ISBN 111");
         Book book2 = new Book("Alien Interns: SETs Extraterrestrial Workforce", 2023, "Alien Sher", "ISBN 667");
         DVD dvd1 = new DVD("SET's High School Musical", 2023, "Musical Yang", 90000);
