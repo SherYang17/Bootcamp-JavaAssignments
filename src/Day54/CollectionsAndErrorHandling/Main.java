@@ -42,15 +42,16 @@ public class Main {
 
         } catch (IndexOutOfBoundsException | IllegalArgumentException e) {
             throw new IndexOutOfBoundsException("This is an argument for Index but incorporating IllegalArgument exception so uncomment line 41 to make it work" + e.getMessage());
-//            System.out.println("Exception error: " + e.getMessage());
+//            System.out.println("Exception error.. " + e.getMessage());
         } catch (ArithmeticException e) {
-            System.out.println("Arithmetic exception error: " + e.getMessage());
+            throw new ArithmeticException("This is the arithmetic argument error..." + e.getMessage()))
+//            System.out.println("Arithmetic exception error.. " + e.getMessage());
 
         } finally {
             System.out.println("Sum of the set: " + sum);
             System.out.println("Average of the set: " + average);
             System.out.println("No duplicate integers of the set: " + noDuplicates);
-            System.out.println("ArithmeticException and IndexOutOfBoundsException isn't used.");
+            System.out.println("ArithmeticException and IllegalArgumentExcept isn't used but put into try methods just for assignment.");
         }
     }
 }
