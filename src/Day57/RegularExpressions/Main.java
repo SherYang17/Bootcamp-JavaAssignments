@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Is the email address valid? " + isValid);
         // ^ (start)
         // First -> A-Z (any uppercase), a-z (any lowercase), 0-9 (any number), +-.- (any of those symbols before @)
-        // Second -> A-Z (any uppercase), a-z (any lowercase), 0-9 (any number), .- (any of those symbols before @)
+        // Second -> A-Z (any uppercase), a-z (any lowercase), 0-9 (any number), .- (any of those symbols after @)
         // $ (end)
     }
 
