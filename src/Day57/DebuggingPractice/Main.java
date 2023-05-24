@@ -13,7 +13,7 @@ public class Main {
 
     public static double sumOfArrays(int[] numbers) {
         int sum = 0;
-        for (int i = 1; i < numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             int number = numbers[i];
             sum = sum + number;
         }
