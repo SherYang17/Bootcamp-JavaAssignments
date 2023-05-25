@@ -1,0 +1,66 @@
+Questions:
+What is I/O in the context of Java? Provide some common use cases for I/O in Java.
+    I/O processes the transferring of data between a program and external sources or destinations such as files,
+    networks, or peripheral devices. Allows programs to interact with other technologies.
+
+    Some common use cases are
+    1. Reading data from files, databases or APIs
+    2. Writing data to files, databases, or APIs
+    3. Sending and receiving data over a network
+    4. Communication with hardware devices
+
+What are InputStream and OutputStream in Java, and what are their primary purposes?
+    Inputstream and Outputstream are abstract classes (from the java.io package) that provide a foundation
+    for reading and writing data in a java program.
+
+    InputStream is a source of data input which allows you to read data from various sources such as files,
+    network connections, or any other input streams. It provides methods to read bytes or characters from the
+    input source.
+
+    Outputstream is the destrination for data output. It allows you to write data to various destinations such
+    as files, network connections, or other output streams. It provides methods for writing bytes or characters
+    to the output destination.
+
+What are the benefits of using buffered I/O streams in Java?
+    buffered I/O streams improve performance by reducing the number of direct read/write operations to the source
+    or destination. Buffered streams transfer data in larger chunks making it more efficient, especially with larger
+    files or remote connections. It basically reduces system, overhead by minimizing costly system calls and disk I/O
+    operations. They're flexible and offer auto flushing, improve performance, and enhance efficiency in data reading
+    and writing tasks.
+
+What is the purpose of InputStreamReader and OutputStreamWriter in Java, and when should they be used?
+    They are bridge classes that convert byte streams to character streams and vice versa. It is necessary because
+    computers only understand bytes and humans (like you and I :)) only communicate in characters like letters, numbers,
+    symbols, etc. Essentially, they convert bytes to characters (encoding) and characters to bytes (decoding) so you
+    can work with text from different sources. An example is sending messages that are transmitted over a network.
+    Messages are encoded into bytes before being sent out the network and on the receiving side, we need to have it
+    decoded to characters to display the message to the end user.
+
+Describe the difference between FileInputStream and FileReader, and between FileOutputStream and FileWriter.
+    FileInputStream is used for reading binary data from a file
+    FileReader is used for reading character data from a file
+    FileOutputStream is used for writing binary data to a file
+    FileWrite is used for writing character data into a file
+
+    The main difference is that
+        FileInputStream and FileOutputStream operates on bytes and are suitable for any types of files
+        FileReader and FileWriter operate on characters and are specifically for text files
+
+What are BufferedReader and BufferedWriter used for in Java?
+    Both are used to improve the efficiency of reading and writing data. They provide buffering capabilities by
+    reading and writing data in larger chunks reducing number of I/o operations and enhancing performance.
+
+What are DataInputStream and DataOutputStream, and what unique functionality do they provide?
+    They are classes provided by the java.io package that let you read and write Java primitives such
+    as (boolean, char, byte, short, int, long, float, and double) in a portable way. They extend FilterInputStream
+    and FilterOutputStream,
+
+Explain the concept of object serialization in Java. Why is it important, and in what scenarios might it be used?
+    Serialization in Java is the process of converting an object's state, including its class information and values
+    of its attributes, into a byte stream. The byte stream can then be sent over a network, saved to a file, or stored
+    in a database for later use. The reverse process, deserialization, is the conversion of this byte stream back to
+    the original object.
+
+    Scenarios that might use this is caching, session management, and so much more.
+
+
