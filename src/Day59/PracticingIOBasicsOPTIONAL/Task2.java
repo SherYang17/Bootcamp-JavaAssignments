@@ -1,4 +1,4 @@
-package Day59;
+package Day59.PracticingIOBasicsOPTIONAL;
 import java.io.FileInputStream; // FileInputStream
 import java.io.IOException; // IOException, printStackTrace, and .read()
 import java.io.*; // all the aboveeeee
@@ -10,7 +10,7 @@ import java.io.*; // all the aboveeeee
 // you open a stream to a file (creating it if necessary) and write data byte by byte. Like FileInputStream, FileOutputStream is meant for writing raw bytes. For writing streams of characters, FileWriter is usually a better choice.
 public class Task2 {
     public static void main(String[] args) {
-        try (FileOutputStream fos = new FileOutputStream("src/Day59/input.txt")) {
+        try (FileOutputStream fos = new FileOutputStream("src/Day59/PracticingIOBasicsOPTIONAL/input.txt")) {
             String str = "Task 2, I am changing all of your contents!";
             fos.write(str.getBytes());
         } catch (IOException e) {

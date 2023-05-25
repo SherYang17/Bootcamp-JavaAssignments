@@ -1,4 +1,4 @@
-package Day59;
+package Day59.PracticingIOBasicsOPTIONAL;
 import java.io.FileInputStream; // FileInputStream
 import java.io.IOException; // IOException, printStackTrace, and .read()
 import java.io.*; // all the aboveeeee
@@ -11,7 +11,7 @@ public class Task4 {
 
     public static void main(String[] args) {
         try {
-            FileInputStream fis = new FileInputStream("src/Day59/input.txt");
+            FileInputStream fis = new FileInputStream("src/Day59/PracticingIOBasicsOPTIONAL/input.txt");
             InputStreamReader reader = new InputStreamReader(fis); // a bridge from byte streams to character streams. It reads bytes and decodes them into characters using a specified charset
             StringBuilder sb = new StringBuilder();
             int i;
@@ -21,7 +21,7 @@ public class Task4 {
             reader.close();
 
             // Uppercase the data
-            FileOutputStream fos = new FileOutputStream("src/Day59/output.txt"); // change the file location!
+            FileOutputStream fos = new FileOutputStream("src/Day59/PracticingIOBasicsOPTIONAL/input.txt"); // change the file location!
             OutputStreamWriter osw = new OutputStreamWriter(fos); // a bridge from character streams to byte streams. Characters written to it are encoded into bytes using a specified charset.
             osw.write(sb.toString());
             osw.close();

@@ -1,4 +1,4 @@
-package Day59;
+package Day59.PracticingIOBasicsOPTIONAL;
 
 import java.io.*; // all the aboveeeee
 
@@ -10,7 +10,7 @@ import java.io.*; // all the aboveeeee
 public class Task7 {
     public static void main(String[] args) {
         // Serialize object to a file
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("src/Day59/student.ser"))) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("src/Day59/PracticingIOBasicsOPTIONAL/student.ser"))) {
             Student s1 = new Student("John", 101);
             out.writeObject(s1);
             System.out.println("Object has been serialized");
@@ -19,7 +19,7 @@ public class Task7 {
         }
 
         // Deserialize object from file
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("src/Day59/student.ser"))) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("src/Day59/PracticingIOBasicsOPTIONAL/student.ser"))) {
             Student s = (Student) in.readObject();
             System.out.println("Object has been deserialized ");
             System.out.println("Name: " + s.name);

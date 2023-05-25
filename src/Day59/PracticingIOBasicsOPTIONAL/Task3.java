@@ -1,4 +1,4 @@
-package Day59;
+package Day59.PracticingIOBasicsOPTIONAL;
 import java.io.FileInputStream; // FileInputStream
 import java.io.IOException; // IOException, printStackTrace, and .read()
 import java.io.*; // all the aboveeeee
@@ -15,7 +15,7 @@ public class Task3 {
     }
 
     public static void bufferedInputStream() { // A BufferedInputStream is used to read information from a stream in a buffered manner.
-        try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream("src/Day59/input.txt"))) {
+        try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream("src/Day59/PracticingIOBasicsOPTIONAL/input.txt"))) {
             int data = bis.read();
             while(data != -1) {
                 System.out.print((char) data);
@@ -28,7 +28,7 @@ public class Task3 {
     // In this example, BufferedInputStream reads data from the file "src/Day59/input.txt". Reading data this way is significantly faster than reading a single byte at a time, especially for large files.
 
     public static void bufferOutputStream() { // A BufferedOutputStream is used to write information to a stream in a buffered manner.
-        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("src/Day59/input.txt"))) {
+        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("src/Day59/PracticingIOBasicsOPTIONAL/input.txt"))) {
             String text = "PLEASE WORK I NEED YOU TO WORK";
             bos.write(text.getBytes());
             bos.flush();

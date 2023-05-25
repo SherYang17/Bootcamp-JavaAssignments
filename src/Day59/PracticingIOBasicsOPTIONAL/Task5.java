@@ -1,4 +1,4 @@
-package Day59;
+package Day59.PracticingIOBasicsOPTIONAL;
 import java.io.FileInputStream; // FileInputStream
 import java.io.IOException; // IOException, printStackTrace, and .read()
 import java.io.*; // all the aboveeeee
@@ -11,9 +11,9 @@ import java.io.*; // all the aboveeeee
 // The FileWriter class is used to write data to a file. Like FileReader, FileWriter uses the default character encoding of the system.
 public class Task5 {
     public static void main(String[] args) {
-        try (FileReader fr = new FileReader("src/Day59/input.txt"); // Write a Java program that uses FileReader and FileWriter to read a .txt file
+        try (FileReader fr = new FileReader("src/Day59/PracticingIOBasicsOPTIONAL/input.txt"); // Write a Java program that uses FileReader and FileWriter to read a .txt file
              BufferedReader br = new BufferedReader(fr);
-             FileWriter fw = new FileWriter("src/Day59/output.txt")) {// Write a Java program that uses FileReader and FileWriter to read a .txt file
+             FileWriter fw = new FileWriter("src/Day59/PracticingIOBasicsOPTIONAL/input.txt")) {// Write a Java program that uses FileReader and FileWriter to read a .txt file
 
             StringBuilder reversedContent = new StringBuilder();
             int character;

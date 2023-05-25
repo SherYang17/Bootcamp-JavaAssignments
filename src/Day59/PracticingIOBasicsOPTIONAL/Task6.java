@@ -1,4 +1,4 @@
-package Day59;
+package Day59.PracticingIOBasicsOPTIONAL;
 import java.io.FileInputStream; // FileInputStream
 import java.io.IOException; // IOException, printStackTrace, and .read()
 import java.io.*; // all the aboveeeee
@@ -12,7 +12,7 @@ import java.io.*; // all the aboveeeee
 // write Java primitives (boolean, char, byte, short, int, long, float, and double) in a portable way.
 public class Task6 {
     public static void main(String[] args) {
-        try (DataInputStream dis = new DataInputStream(new FileInputStream("src/Day59/output.dat"))) { // DataInputStream It has methods to read all of Java's primitive types.
+        try (DataInputStream dis = new DataInputStream(new FileInputStream("src/Day59/PracticingIOBasicsOPTIONAL/output.dat"))) { // DataInputStream It has methods to read all of Java's primitive types.
             int i = dis.readInt();
             float f = dis.readFloat();
             boolean b = dis.readBoolean();
@@ -22,7 +22,7 @@ public class Task6 {
             e.printStackTrace();
         }
 
-        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("src/Day59/output.dat"))) { // DataOutputStream It has methods to write all of Java's primitive types.
+        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("src/Day59/PracticingIOBasicsOPTIONAL/output.dat"))) { // DataOutputStream It has methods to write all of Java's primitive types.
             int i = 123;       // The data types should include: int, float, boolean, and char.
             float f = 123.45f; // The data types should include: int, float, boolean, and char.
             boolean b = true;  // The data types should include: int, float, boolean, and char.

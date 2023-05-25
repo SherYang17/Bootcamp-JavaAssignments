@@ -1,4 +1,4 @@
-package Day59;
+package Day59.PracticingIOBasicsOPTIONAL;
 // Write a simple Java program that uses FileInputStream to read a file byte by byte.
 // 1. The file should be a .txt file of your choosing that contains several lines of text. Output the read data to the console.
 
@@ -13,7 +13,7 @@ import java.io.*; // all the aboveeeee
 
 public class Task1 {
     public static void main(String[] args) {
-        try (FileInputStream fis = new FileInputStream("src/Day59/input.txt")) { // have to specify the path since I'm 1 level down the src...
+        try (FileInputStream fis = new FileInputStream("src/Day59/PracticingIOBasicsOPTIONAL/input.txt")) { // have to specify the path since I'm 1 level down the src...
             int i;
             while ((i = fis.read()) != -1) {
                 System.out.print((char) i);
