@@ -15,7 +15,7 @@ public class SharedBuffer { // 2. Define a SharedBuffer class to handle the shar
     // / wait, notify, and notifyAll methods
     // create 2 classes
     public synchronized void produce(String item) { // 2d. Use wait() and notifyAll() methods to coordinate access to the buffer.
-        while (buffer.size() == maxSize) {          // Buffer is full, wait for the consumer to remove elements
+        while (buffer.size() == maxSize) {          // Buffer is full, wait for the consumer to remove elements, since I capped it at 5, fifo takes place until consumer takes action
             try {
                 wait(); // 2b. Wait if buffer is full // 2d. Use wait() and notifyAll() methods to coordinate access to the buffer.
             } catch (InterruptedException e) {
@@ -37,7 +37,7 @@ public class SharedBuffer { // 2. Define a SharedBuffer class to handle the shar
         }
 
         String item = buffer.poll();; // (2c) Remove and return number from the buffer //intellij will convert it from int number = buffer.poll(); // poll()Removes the head of the queue and returns it. If the queue is empty, it returns null.
-        System.out.println("Is consumer consuming: " + item);
+        System.out.println("Is consumer consuming: " + item); // test it
         notifyAll(); // (2d) Notify producer that a number has been consumed
         return item;
     }
@@ -54,10 +54,10 @@ class Consumer implements Runnable {
         this.sum = 0;
     }
 
-    // The `run()` method contains the code that will be executed when the Thread is started. It is defined
+    // The run() method contains the code that will be executed when the Thread is started. It is defined
     // within a Runnable object as seen in the previous example. And is invoked when the Thread is passed to is ‘started’
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) { // my buffer size is 10
             String item = sharedBuffer.consume(); // 3b. Retrieve number from the shared buffer
             int number = Integer.parseInt(item); // 3c. Calculate the sum of retrieved numbers
             sum = sum + number;
@@ -71,9 +71,9 @@ class Consumer implements Runnable {
     }
 }
 
-    class Main { // In the main method or a separate Main class:
-        public static void main(String[] args) {
-            int maxSize = 1; // 4a. Create an instance of the SharedBuffer class with a specified maximum size. // put this first otherwise sharedbuffer below wont take in argument
+class Main { // In the main method or a separate Main class:
+    public static void main(String[] args) {
+            int maxSize = 5; // 4a. Create an instance of the SharedBuffer class with a specified maximum size. // put this first otherwise sharedbuffer below wont take in argument
             SharedBuffer sharedBuffer = new SharedBuffer(maxSize); // 4a. Create an instance of the SharedBuffer class with a specified maximum size.
 
 
@@ -85,35 +85,38 @@ class Consumer implements Runnable {
 
             producerThread.start(); // 4d. Start the consumer thread
             consumerThread.start(); // 4d. Start the consumer thread
-        }
+    }
+}
+
+class Producer implements Runnable { // Why wasn't this said before step 4????
+    private SharedBuffer sharedBuffer;
+
+    public Producer(SharedBuffer sharedBuffer) {
+        this.sharedBuffer = sharedBuffer; // 6a. Accept a reference to the SharedBuffer object
     }
 
-    class Producer implements Runnable { // Why wasn't this said before step 5????
-        private SharedBuffer sharedBuffer;
-
-        public Producer(SharedBuffer sharedBuffer) {
-            this.sharedBuffer = sharedBuffer; // 6a. Accept a reference to the SharedBuffer object
-        }
-
-        // The `run()` method contains the code that will be executed when the Thread is started. It is defined
-        // within a Runnable object as seen in the previous example. And is invoked when the Thread is passed to is ‘started’
-        public void run() {
-            for (int i = 0; i < 10; i++) { // run 10 times
-                int number = generateRandomNumber(); // 6b. Generate random number
-                sharedBuffer.produce(String.valueOf(number));// 6c. Add the random number to the shared buffer
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+    // The run() method contains the code that will be executed when the Thread is started. It is defined
+    // within a Runnable object as seen in the previous example. And is invoked when the Thread is passed to is ‘started’
+    public void run() {
+        for (int i = 0; i < 10; i++) { // my buffer size is 10
+            int number = generateRandomNumber(); // 6b. Generate random number
+            sharedBuffer.produce(String.valueOf(number));// 6c. Add the random number to the shared buffer
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
-
-        public int generateRandomNumber() { // 6b. Generate random number
-            return (int) (Math.random() * 100); // use math random up to 100, make int since it can be double
-        }
     }
 
+    public int generateRandomNumber() { // 6b. Generate random number
+        return (int) (Math.random() * 100); // use math random up to 100, make int since it can be double
+    }
+
+}
+
+// To recap, think of a printer machine. Producer requests to print something in the printer which is our buffer and the consumer is when the printer prints the result. I can cap the print to take 5 requests to print 5 files or pdfs and until the papers print, it waits till 1 is printed to become 4, then another one can be queued up.
+// NotifyAll() is used to notify all threads. If we had hundreds of thread, makes no sense to notify threads that have no similarities or involvement. But for assignment, theres only 2 so notifyall suffices.
 
 
 //        Implement a simple producer-consumer problem
