@@ -1,4 +1,4 @@
-package Day59.AssignmentIO;
+package Day60.AssignmentIO;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,15 +8,13 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 import java.io.*;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            BufferedReader input1 = new BufferedReader(new FileReader("src/Day59/AssignmentIO/input1.txt")); // 1. Read integers from two text files called "input1.txt" and "input2.txt". Each integer is on a new line in the respective files.
-            BufferedReader input2 = new BufferedReader(new FileReader("src/Day59/AssignmentIO/input2.txt")); // 1. Read integers from two text files called "input1.txt" and "input2.txt". Each integer is on a new line in the respective files.
-            BufferedWriter merged = new BufferedWriter(new FileWriter("src/Day59/AssignmentIO/merged.txt"));
+            BufferedReader input1 = new BufferedReader(new FileReader("src/Day60/AssignmentIO/input1.txt")); // 1. Read integers from two text files called "input1.txt" and "input2.txt". Each integer is on a new line in the respective files.
+            BufferedReader input2 = new BufferedReader(new FileReader("src/Day60/AssignmentIO/input2.txt")); // 1. Read integers from two text files called "input1.txt" and "input2.txt". Each integer is on a new line in the respective files.
+            BufferedWriter merged = new BufferedWriter(new FileWriter("src/Day60/AssignmentIO/merged.txt"));
 
             mergeBothFiles(input1, input2, merged); // 2. Merge the contents of the two input files, Merge the contents of the two input files, maintaining the original order of the integers, and write the result to a new text file called "merged.txt".
             printNumbersInConsole();                // 3. Identify the integers that are present in both input files.
@@ -75,9 +73,9 @@ public class Main {
 
     private static void commonIntegers() {
         try {
-            BufferedReader input1 = new BufferedReader(new FileReader("src/Day59/AssignmentIO/input1.txt"));
-            BufferedReader input2 = new BufferedReader(new FileReader("src/Day59/AssignmentIO/input2.txt"));
-            BufferedWriter common = new BufferedWriter(new FileWriter("src/Day59/AssignmentIO/common.txt"));
+            BufferedReader input1 = new BufferedReader(new FileReader("src/Day60/AssignmentIO/input1.txt"));
+            BufferedReader input2 = new BufferedReader(new FileReader("src/Day60/AssignmentIO/input2.txt"));
+            BufferedWriter common = new BufferedWriter(new FileWriter("src/Day60/AssignmentIO/common.txt"));
 
             Set<Integer> commonIntegers = new HashSet<>(); // As the while loops run, the common numbers are added into the HashSet which does not take any duplicate values.
 
@@ -112,8 +110,8 @@ public class Main {
 
     private static void printNumbersInConsole() { // only reading the integers in the file
         try {
-            BufferedReader input1 = new BufferedReader(new FileReader("src/Day59/AssignmentIO/input1.txt"));
-            BufferedReader input2 = new BufferedReader(new FileReader("src/Day59/AssignmentIO/input2.txt"));
+            BufferedReader input1 = new BufferedReader(new FileReader("src/Day60/AssignmentIO/input1.txt"));
+            BufferedReader input2 = new BufferedReader(new FileReader("src/Day60/AssignmentIO/input2.txt"));
 
             String consoleLine;
 
